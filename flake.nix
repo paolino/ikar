@@ -20,5 +20,12 @@
             gems.wrappedRuby
           ];
         };
+        packages = {
+            ikar = pkgs.bundlerApp {
+                pname = "ikar";
+                gemdir = ./.;
+                exes = "app";
+            };
+        };
       });
 }
